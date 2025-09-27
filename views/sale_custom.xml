@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+    <record id="access_wizard_invocar" model="ir.ui.view">
+        <field name="name">access.wizard.invocar</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <button type="object" name="open_wizard" string="Cambiar Producto" class="btn btn-primary"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

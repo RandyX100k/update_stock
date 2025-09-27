@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_update_stock_user,access.update.stock.user,model_update_stock,base.group_user,1,1,1,1
+access_update_stock_line,access_update_stock_line,model_update_stock_line,base.group_user,1,1,1,1
+access_wizard_change_product,access.wizard.change.product,model_wizard_change_product,base.group_user,1,1,1,1
+access_wizard_change_product_line,access.wizard.change.product.line,model_wizard_change_lines,base.group_user,1,1,1,1

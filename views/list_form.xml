@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="form_view_update_stock" model="ir.ui.view">
+        <field name="name">Actualizar Stock</field>
+        <field name="model">update.stock</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button type="object" name="proccess_stock" string="Procesar" clas="btn btn-primary" invisible="state == 'done'"/>
+                    <field name="state" widget="statusbar" options="{'clickable':0}"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                    </div>
+
+                    <group>
+                        <field name="location_id"/>
+                    </group>
+                    <notebook>
+                        <page string="Productos">
+                            <field name="product_ids">
+                                <list editable="bottom">
+                                    <field name="barcode"/>
+                                    <field name="qty"/>
+                                    <field name="product_id"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+
+                </sheet>
+            </form>
+        </field>
+
+    </record>
+
+    <record id="action_update_stock" model="ir.actions.act_window">
+        <field name="name">Actualizar Stock</field>
+        <field name="res_model">update.stock</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

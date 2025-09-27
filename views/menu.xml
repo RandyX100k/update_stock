@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+
+    <menuitem id="parent_update_stock" name="Ajustes" web_icon="update_stock,static/description/icon.png"/>
+
+    <menuitem id="access_update_stock" name="Stock" parent="parent_update_stock"
+              action="update_stock.action_update_stock"/>
+
+</odoo>

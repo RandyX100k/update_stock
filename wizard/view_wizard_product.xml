@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_wizard_form" model="ir.ui.view">
+        <field name="name">Cambiar Producto</field>
+        <field name="model">wizard.change.product</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="order_id"/>
+                </group>
+                <notebook>
+                    <page string="Productos">
+                        <field name="line_ids">
+                            <list editable="bottom">
+                                <field name="product_id"/>
+                                <field name="product_change_id"/>
+                                <field name="product_uom_qty"/>
+                                <field name="price_unit"/>
+                            </list>
+                        </field>
+                    </page>
+                </notebook>
+                <footer>
+                    <button special="cancel" string="Cancelar" clas="btn btn-primary"/>
+                    <button type="object" string="Confirmar" name="action_confirmar"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>
